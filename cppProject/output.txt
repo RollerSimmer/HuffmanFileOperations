@@ -1,0 +1,1 @@
+This program needs at least 3 arguments, specifying names of original, encoded, and decoded files.

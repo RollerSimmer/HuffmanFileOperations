@@ -1,0 +1,127 @@
+File format for .huf files
+==========================
+
+The .huf file is a Huffman-encoded file.  It consists of four blocks.  The blocks are
+described in detail below.
+
+1. Block #1 - Signature:
+------------------------
+This block should contain the 12 character string "HUFFMAN_FILE"
+with no null terminator.
+
+2. Block #2 - Stream size:
+-------------------------
+A 32-bit integer specifying size of the file in total number of used bits.  
+The reader should stop when this many packed bits have been processed in the stream.
+
+3. Block #3 - Tree data:
+-----------------------
+A block of tree entries in post order that represent the Huffman encoding tree.
+The format of each entry is as follows:
+
+    Field #1 - Flag (1 byte):
+                 Flag Bit  Flag Description
+                 --------------------------
+                 0         If set, node contains a left child
+                 1         If set, node contains a right child
+                 2         If set, node contains data and is a leaf node
+                           Overrides flag bits 0-1.
+
+    Field #2 - Data (1 byte, optional):
+               The unencoded byte value represented by this 
+               tree node.
+
+3.1 Processing tree data:
+-------------------------
+
+The tree data can be processed as follows:
+    init stack
+    init done flag to false
+    while not done reading nodes, do this
+        read the next node
+        if node is a leaf, then do this
+            push the node onto the stack
+        else, do this
+            if node has right child, do this
+                pop the right child node from the stack
+                add the right child node to the tree
+                link the parent node to its right child properly
+            if node has left child, do this
+                pop the left child node from the stack
+                add the left child node to the tree
+                link the parent node to its left child properly
+            push the recently read node onto the stack
+        if stack size = 1, do this
+            check the top of the stack
+            set done flag to is-root flag of node at stack-top
+            boolean-OR done flag with no more bits left to process
+
+3.1.1 Processing an Example list:
+---------------------------------
+
+    -- Example list (<- link left, -> link right) --
+    
+                          The original tree 
+                                
+                                6
+                               / \
+                              3   5
+                                 / \
+                                2   4
+                                   / \ 
+                                  0   1   
+    
+      * post-order list to process: 3, 2, 0, 1, <-4->, <-5->, <-6->
+      
+      * steps for processing list back to tree.
+      
+        step   filenode      stack after    links added  added to tree   done    
+        ----   --------      -----------    -----------  -------------   -----
+        0      init          empty                                       false
+        1      3             3                                           false
+        2      2             3,2                                         false 
+        3      0             3,2,0                                       false
+        4      1             3,2,0,1                                     false
+        5      <-4->         3,2,4          0<-4->1      0,1             false   
+        6      <-5->         3,5            2<-5->4      2,4             false
+        7      <-6->         6              3<-6->5      3,5             true
+
+                          The constructed tree 
+                                
+                                6
+                               / \
+                              3   5
+                                 / \
+                                2   4
+                                   / \ 
+                                  0   1   
+
+3.2 Writing tree data:
+----------------------
+            
+To write the tree data, use this algorithm:
+    clear visited flag for each node in tree
+    init stack
+    push root
+    while stack is not empty, do this
+        look at top node, and mark it visited
+        if top node has unvisited left child, do this
+            push the left child of the top node onto stack
+        elif top node has unvisited right child, do this
+            push the right child of the top node onto stack
+        else, do this
+            write top node
+            pop top off of stack
+            
+4. Block #4 - Encoded file data:
+-------------------------------
+The 4th block encodes the raw file via Huffman coding.  Data is bit-packed.
+
+For writing: Use the tree and a code lookup table to translate bytes into
+packed bit codes representing the raw bytes, and add packed bit to encoded
+data stream.  
+
+For reading: Build the tree from the file header, and interpret branches as 
+ones and zeros.  Left = 0, right = 1. Just build up a code until a leaf node
+is reached, and add data for that node to the raw decoded data stream. 
+

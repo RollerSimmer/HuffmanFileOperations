@@ -1,0 +1,179 @@
+
+************************ENCODE STEP********************************
+
+-- Node list --
+.  Leaf-Node: index=0, parent=25, code1=, code2=11, direction=1, data=0 (00), weight=16789, left=-1, right=-1
+.  Leaf-Node: index=1, parent=14, code1=, code2=00000010, direction=0, data=1 (01), weight=2, left=-1, right=-1
+.  Leaf-Node: index=2, parent=17, code1=, code2=01100010, direction=0, data=11 (0b), weight=4, left=-1, right=-1
+.  Leaf-Node: index=3, parent=14, code1=, code2=10000010, direction=1, data=24 (18), weight=2, left=-1, right=-1
+.  Leaf-Node: index=4, parent=22, code1=, code2=1010, direction=1, data=25 (19), weight=3798, left=-1, right=-1
+.  Leaf-Node: index=5, parent=17, code1=, code2=11100010, direction=1, data=66 (42), weight=4, left=-1, right=-1
+.  Leaf-Node: index=6, parent=15, code1=, code2=01000010, direction=0, data=77 (4d), weight=2, left=-1, right=-1
+.  Leaf-Node: index=7, parent=15, code1=, code2=11000010, direction=1, data=108 (6c), weight=2, left=-1, right=-1
+.  Leaf-Node: index=8, parent=24, code1=, code2=00, direction=0, data=127 (7f), weight=9425, left=-1, right=-1
+.  Leaf-Node: index=9, parent=16, code1=, code2=00100010, direction=0, data=128 (80), weight=2, left=-1, right=-1
+.  Leaf-Node: index=10, parent=21, code1=, code2=10010, direction=1, data=130 (82), weight=162, left=-1, right=-1
+.  Leaf-Node: index=11, parent=23, code1=, code2=110, direction=1, data=153 (99), weight=6237, left=-1, right=-1
+.  Leaf-Node: index=12, parent=16, code1=, code2=10100010, direction=1, data=192 (c0), weight=2, left=-1, right=-1
+.  Leaf-Node: index=13, parent=25, code1=, code2=01, direction=0, data=255 (ff), weight=12843, left=-1, right=-1
+.  Node: index=14, parent=18, direction=0, data=0 (00), weight=4, left=1, right=3
+.  Node: index=15, parent=18, direction=1, data=0 (00), weight=4, left=6, right=7
+.  Node: index=16, parent=19, direction=0, data=0 (00), weight=4, left=9, right=12
+.  Node: index=17, parent=19, direction=1, data=0 (00), weight=8, left=2, right=5
+.  Node: index=18, parent=20, direction=0, data=0 (00), weight=8, left=14, right=15
+.  Node: index=19, parent=20, direction=1, data=0 (00), weight=12, left=16, right=17
+.  Node: index=20, parent=21, direction=0, data=0 (00), weight=20, left=18, right=19
+.  Node: index=21, parent=22, direction=0, data=0 (00), weight=182, left=20, right=10
+.  Node: index=22, parent=23, direction=0, data=0 (00), weight=3980, left=21, right=4
+.  Node: index=23, parent=24, direction=1, data=0 (00), weight=10217, left=22, right=11
+.  Node: index=24, parent=26, direction=0, data=0 (00), weight=19642, left=8, right=23
+.  Node: index=25, parent=26, direction=1, data=0 (00), weight=29632, left=13, right=0
+.  Node: index=26, parent=-1, direction=2, data=0 (00), weight=49274, left=24, right=25
+
+-- Tree Data --
+.  Node: index=26, parent=-1, direction=2, data=0 (00), weight=49274, left=24, right=25
+.  .  Node: index=24, parent=26, direction=0, data=0 (00), weight=19642, left=8, right=23
+.  .  .  Leaf-Node: index=8, parent=24, code1=00, code2=00, direction=0, data=127 (7f), weight=9425, left=-1, right=-1
+.  .  .  Node: index=23, parent=24, direction=1, data=0 (00), weight=10217, left=22, right=11
+.  .  .  .  Node: index=22, parent=23, direction=0, data=0 (00), weight=3980, left=21, right=4
+.  .  .  .  .  Node: index=21, parent=22, direction=0, data=0 (00), weight=182, left=20, right=10
+.  .  .  .  .  .  Node: index=20, parent=21, direction=0, data=0 (00), weight=20, left=18, right=19
+.  .  .  .  .  .  .  Node: index=18, parent=20, direction=0, data=0 (00), weight=8, left=14, right=15
+.  .  .  .  .  .  .  .  Node: index=14, parent=18, direction=0, data=0 (00), weight=4, left=1, right=3
+.  .  .  .  .  .  .  .  .  Leaf-Node: index=1, parent=14, code1=00000010, code2=00000010, direction=0, data=1 (01), weight=2, left=-1, right=-1
+.  .  .  .  .  .  .  .  .  Leaf-Node: index=3, parent=14, code1=10000010, code2=10000010, direction=1, data=24 (18), weight=2, left=-1, right=-1
+.  .  .  .  .  .  .  .  Node: index=15, parent=18, direction=1, data=0 (00), weight=4, left=6, right=7
+.  .  .  .  .  .  .  .  .  Leaf-Node: index=6, parent=15, code1=01000010, code2=01000010, direction=0, data=77 (4d), weight=2, left=-1, right=-1
+.  .  .  .  .  .  .  .  .  Leaf-Node: index=7, parent=15, code1=11000010, code2=11000010, direction=1, data=108 (6c), weight=2, left=-1, right=-1
+.  .  .  .  .  .  .  Node: index=19, parent=20, direction=1, data=0 (00), weight=12, left=16, right=17
+.  .  .  .  .  .  .  .  Node: index=16, parent=19, direction=0, data=0 (00), weight=4, left=9, right=12
+.  .  .  .  .  .  .  .  .  Leaf-Node: index=9, parent=16, code1=00100010, code2=00100010, direction=0, data=128 (80), weight=2, left=-1, right=-1
+.  .  .  .  .  .  .  .  .  Leaf-Node: index=12, parent=16, code1=10100010, code2=10100010, direction=1, data=192 (c0), weight=2, left=-1, right=-1
+.  .  .  .  .  .  .  .  Node: index=17, parent=19, direction=1, data=0 (00), weight=8, left=2, right=5
+.  .  .  .  .  .  .  .  .  Leaf-Node: index=2, parent=17, code1=01100010, code2=01100010, direction=0, data=11 (0b), weight=4, left=-1, right=-1
+.  .  .  .  .  .  .  .  .  Leaf-Node: index=5, parent=17, code1=11100010, code2=11100010, direction=1, data=66 (42), weight=4, left=-1, right=-1
+.  .  .  .  .  .  Leaf-Node: index=10, parent=21, code1=10010, code2=10010, direction=1, data=130 (82), weight=162, left=-1, right=-1
+.  .  .  .  .  Leaf-Node: index=4, parent=22, code1=1010, code2=1010, direction=1, data=25 (19), weight=3798, left=-1, right=-1
+.  .  .  .  Leaf-Node: index=11, parent=23, code1=110, code2=110, direction=1, data=153 (99), weight=6237, left=-1, right=-1
+.  .  Node: index=25, parent=26, direction=1, data=0 (00), weight=29632, left=13, right=0
+.  .  .  Leaf-Node: index=13, parent=25, code1=01, code2=01, direction=0, data=255 (ff), weight=12843, left=-1, right=-1
+.  .  .  Leaf-Node: index=0, parent=25, code1=11, code2=11, direction=1, data=0 (00), weight=16789, left=-1, right=-1
+
+Short list for tree
+26, 24, 8, 23, 22, 21, 20, 18, 14, 1, 3, 15, 6, 7, 19, 16, 9, 12, 17, 2, 5, 10, 4, 11, 25, 13, 0
+
+Post order short list:
+8, 1, 3, 14, 6, 7, 15, 18, 9, 12, 16, 2, 5, 17, 19, 20, 10, 21, 4, 22, 11, 23, 24, 13, 0, 25, 26
+
+-- Code Map --
+   data -> code
+   ------------
+   0 -> 3 (11)
+   1 -> 2 (00000010)
+   11 -> 98 (01100010)
+   24 -> 130 (10000010)
+   25 -> 10 (1010)
+   66 -> 226 (11100010)
+   77 -> 66 (01000010)
+   108 -> 194 (11000010)
+   127 -> 0 (00)
+   128 -> 34 (00100010)
+   130 -> 18 (10010)
+   153 -> 6 (110)
+   192 -> 162 (10100010)
+   255 -> 1 (01)
+code count: 14
+
+
+************************DECODE STEP****************************
+
+-- Node list --
+.  Leaf-Node: index=0, parent=5, code1=, code2=10000010, direction=2, data=24 (18), weight=1, left=-1, right=-1
+.  Leaf-Node: index=1, parent=5, code1=, code2=00000010, direction=2, data=1 (01), weight=1, left=-1, right=-1
+.  Leaf-Node: index=2, parent=4, code1=, code2=11000010, direction=2, data=108 (6c), weight=1, left=-1, right=-1
+.  Leaf-Node: index=3, parent=4, code1=, code2=01000010, direction=2, data=77 (4d), weight=1, left=-1, right=-1
+.  Node: index=4, parent=13, direction=2, data=0 (00), weight=1, left=3, right=2
+.  Node: index=5, parent=13, direction=2, data=0 (00), weight=1, left=1, right=0
+.  Leaf-Node: index=6, parent=11, code1=, code2=10100010, direction=2, data=192 (c0), weight=1, left=-1, right=-1
+.  Leaf-Node: index=7, parent=11, code1=, code2=00100010, direction=2, data=128 (80), weight=1, left=-1, right=-1
+.  Leaf-Node: index=8, parent=10, code1=, code2=11100010, direction=2, data=66 (42), weight=1, left=-1, right=-1
+.  Leaf-Node: index=9, parent=10, code1=, code2=01100010, direction=2, data=11 (0b), weight=1, left=-1, right=-1
+.  Node: index=10, parent=12, direction=2, data=0 (00), weight=1, left=9, right=8
+.  Node: index=11, parent=12, direction=2, data=0 (00), weight=1, left=7, right=6
+.  Node: index=12, parent=15, direction=2, data=0 (00), weight=1, left=11, right=10
+.  Node: index=13, parent=15, direction=2, data=0 (00), weight=1, left=5, right=4
+.  Leaf-Node: index=14, parent=17, code1=, code2=10010, direction=2, data=130 (82), weight=1, left=-1, right=-1
+.  Node: index=15, parent=17, direction=2, data=0 (00), weight=1, left=13, right=12
+.  Leaf-Node: index=16, parent=19, code1=, code2=1010, direction=2, data=25 (19), weight=1, left=-1, right=-1
+.  Node: index=17, parent=19, direction=2, data=0 (00), weight=1, left=15, right=14
+.  Leaf-Node: index=18, parent=20, code1=, code2=110, direction=2, data=153 (99), weight=1, left=-1, right=-1
+.  Node: index=19, parent=20, direction=2, data=0 (00), weight=1, left=17, right=16
+.  Node: index=20, parent=25, direction=2, data=0 (00), weight=1, left=19, right=18
+.  Leaf-Node: index=21, parent=25, code1=, code2=00, direction=2, data=127 (7f), weight=1, left=-1, right=-1
+.  Leaf-Node: index=22, parent=24, code1=, code2=11, direction=2, data=0 (00), weight=1, left=-1, right=-1
+.  Leaf-Node: index=23, parent=24, code1=, code2=01, direction=2, data=255 (ff), weight=1, left=-1, right=-1
+.  Node: index=24, parent=26, direction=2, data=0 (00), weight=1, left=23, right=22
+.  Node: index=25, parent=26, direction=2, data=0 (00), weight=1, left=21, right=20
+.  Node: index=26, parent=-1, direction=2, data=0 (00), weight=1, left=25, right=24
+
+-- Tree Data --
+.  Node: index=26, parent=-1, direction=2, data=0 (00), weight=1, left=25, right=24
+.  .  Node: index=25, parent=26, direction=2, data=0 (00), weight=1, left=21, right=20
+.  .  .  Leaf-Node: index=21, parent=25, code1=00, code2=00, direction=2, data=127 (7f), weight=1, left=-1, right=-1
+.  .  .  Node: index=20, parent=25, direction=2, data=0 (00), weight=1, left=19, right=18
+.  .  .  .  Node: index=19, parent=20, direction=2, data=0 (00), weight=1, left=17, right=16
+.  .  .  .  .  Node: index=17, parent=19, direction=2, data=0 (00), weight=1, left=15, right=14
+.  .  .  .  .  .  Node: index=15, parent=17, direction=2, data=0 (00), weight=1, left=13, right=12
+.  .  .  .  .  .  .  Node: index=13, parent=15, direction=2, data=0 (00), weight=1, left=5, right=4
+.  .  .  .  .  .  .  .  Node: index=5, parent=13, direction=2, data=0 (00), weight=1, left=1, right=0
+.  .  .  .  .  .  .  .  .  Leaf-Node: index=1, parent=5, code1=00000010, code2=00000010, direction=2, data=1 (01), weight=1, left=-1, right=-1
+.  .  .  .  .  .  .  .  .  Leaf-Node: index=0, parent=5, code1=10000010, code2=10000010, direction=2, data=24 (18), weight=1, left=-1, right=-1
+.  .  .  .  .  .  .  .  Node: index=4, parent=13, direction=2, data=0 (00), weight=1, left=3, right=2
+.  .  .  .  .  .  .  .  .  Leaf-Node: index=3, parent=4, code1=01000010, code2=01000010, direction=2, data=77 (4d), weight=1, left=-1, right=-1
+.  .  .  .  .  .  .  .  .  Leaf-Node: index=2, parent=4, code1=11000010, code2=11000010, direction=2, data=108 (6c), weight=1, left=-1, right=-1
+.  .  .  .  .  .  .  Node: index=12, parent=15, direction=2, data=0 (00), weight=1, left=11, right=10
+.  .  .  .  .  .  .  .  Node: index=11, parent=12, direction=2, data=0 (00), weight=1, left=7, right=6
+.  .  .  .  .  .  .  .  .  Leaf-Node: index=7, parent=11, code1=00100010, code2=00100010, direction=2, data=128 (80), weight=1, left=-1, right=-1
+.  .  .  .  .  .  .  .  .  Leaf-Node: index=6, parent=11, code1=10100010, code2=10100010, direction=2, data=192 (c0), weight=1, left=-1, right=-1
+.  .  .  .  .  .  .  .  Node: index=10, parent=12, direction=2, data=0 (00), weight=1, left=9, right=8
+.  .  .  .  .  .  .  .  .  Leaf-Node: index=9, parent=10, code1=01100010, code2=01100010, direction=2, data=11 (0b), weight=1, left=-1, right=-1
+.  .  .  .  .  .  .  .  .  Leaf-Node: index=8, parent=10, code1=11100010, code2=11100010, direction=2, data=66 (42), weight=1, left=-1, right=-1
+.  .  .  .  .  .  Leaf-Node: index=14, parent=17, code1=10010, code2=10010, direction=2, data=130 (82), weight=1, left=-1, right=-1
+.  .  .  .  .  Leaf-Node: index=16, parent=19, code1=1010, code2=1010, direction=2, data=25 (19), weight=1, left=-1, right=-1
+.  .  .  .  Leaf-Node: index=18, parent=20, code1=110, code2=110, direction=2, data=153 (99), weight=1, left=-1, right=-1
+.  .  Node: index=24, parent=26, direction=2, data=0 (00), weight=1, left=23, right=22
+.  .  .  Leaf-Node: index=23, parent=24, code1=01, code2=01, direction=2, data=255 (ff), weight=1, left=-1, right=-1
+.  .  .  Leaf-Node: index=22, parent=24, code1=11, code2=11, direction=2, data=0 (00), weight=1, left=-1, right=-1
+
+Short list for tree
+26, 25, 21, 20, 19, 17, 15, 13, 5, 1, 0, 4, 3, 2, 12, 11, 7, 6, 10, 9, 8, 14, 16, 18, 24, 23, 22
+
+Post order short list:
+21, 1, 0, 5, 3, 2, 4, 13, 7, 6, 11, 9, 8, 10, 12, 15, 14, 17, 16, 19, 18, 20, 25, 23, 22, 24, 26
+
+-- Code Map --
+   data -> code
+   ------------
+   0 -> 3 (11)
+   1 -> 2 (00000010)
+   11 -> 98 (01100010)
+   24 -> 130 (10000010)
+   25 -> 10 (1010)
+   66 -> 226 (11100010)
+   77 -> 66 (01000010)
+   108 -> 194 (11000010)
+   127 -> 0 (00)
+   128 -> 34 (00100010)
+   130 -> 18 (10010)
+   153 -> 6 (110)
+   192 -> 162 (10100010)
+   255 -> 1 (01)
+code count: 14
+
+
+************************COMPARISON STEP****************************
+
+Differences between file 'files/lines.bmp' and file 'files/lines_decoded.bmp'
+No differences in compared bytes.
+Files are the same size.
+

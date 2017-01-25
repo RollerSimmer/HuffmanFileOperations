@@ -1,0 +1,307 @@
+SMU Guildhall Game Development Education </guildhall>
+//
+// <https://www.facebook.com/smuguildhall>    //
+<http://www.youtube.com/theguildhallatsmu> 
+
+  *
+    Navigate**
+
+    <#>
+  *
+    Search
+
+    <#>
+      o
+  *
+    Social
+
+    <#>
+      o
+        //
+
+        <http://facebook.com/smudallas> 
+        //
+
+        <http://twitter.com/smu/> 
+        //
+
+        <http://www.youtube.com/user/SMUVideo> 
+        //
+
+        <http://feeds.feedburner.com/smunews> 
+        //
+
+        <https://plus.google.com/110354444100293121796/> 
+        //
+
+        <http://smu.edu/itunes/> 
+        //
+
+        <http://www.smu.edu/AboutSMU/SocialMediaDirectory>
+
+  *
+    About Us**
+
+      o
+        About Us
+
+        </Guildhall/AboutUs.aspx>
+      o
+        Faculty
+
+        </Guildhall/AboutUs/Faculty.aspx>
+      o
+        Staff
+
+        </Guildhall/AboutUs/Staff.aspx>
+      o
+        The Guildhall Academy
+
+        </Guildhall/AboutUs/TheGuildhallAcademy.aspx>
+      o
+        Graduation Speakers
+
+        </Guildhall/AboutUs/GraduationSpeakers.aspx>
+      o
+        General FAQ
+
+        </Guildhall/AboutUs/GeneralFAQ.aspx>
+      o
+        News
+
+        </Guildhall/AboutUs/News.aspx>
+  *
+    Academics**
+
+      o
+        Academics
+
+        </Guildhall/Academics.aspx>
+      o
+        Core Courses
+
+        </Guildhall/Academics/CoreCourses.aspx>
+      o
+        Specializations
+
+        </Guildhall/Academics/Specializations.aspx>
+      o
+        Team Game Projects
+
+        </Guildhall/Academics/TeamGameProjects.aspx>
+      o
+        Master's Thesis
+
+        </Guildhall/Academics/MastersThesis.aspx>
+      o
+        Curriculum
+
+        </Guildhall/Academics/Curriculum.aspx>
+      o
+        Academic Calendar
+
+        </Guildhall/Academics/AcademicCalendar.aspx>
+  *
+    Admissions**
+
+      o
+        Admissions
+
+        </Guildhall/Admissions.aspx>
+      o
+        Admission Requirements
+
+        </Guildhall/Admissions/AdmissionRequirements.aspx>
+      o
+        Portfolio Requirements
+
+        </Guildhall/Admissions/PortfolioRequirements.aspx>
+      o
+        Financial Information
+
+        </Guildhall/Admissions/FinancialInformation.aspx>
+      o
+        Policies
+
+        </Guildhall/Admissions/Policies.aspx>
+      o
+        Application Checklist
+
+        </Guildhall/Admissions/ApplicationChecklist.aspx>
+      o
+        Guildhall Preparation
+
+        </Guildhall/Admissions/GuildhallPreparation.aspx>
+  *
+    Career Services
+
+    </Guildhall/CareerServices.aspx>
+  *
+    Student Work
+
+    </Guildhall/StudentWork.aspx>
+  *
+    Alumni
+
+    </Guildhall/Alumni.aspx>
+  *
+    Contact Us**
+
+      o
+        Contact Us
+
+        </Guildhall/ContactUs.aspx>
+      o
+        Tours
+
+        </Guildhall/ContactUs/Tours.aspx>
+      o
+        Employment
+
+        </Guildhall/ContactUs/Employment.aspx>
+
+ProgrammingAdmissions
+
+  * Admissions </Guildhall/Admissions.aspx>  /
+  * Portfolio Requirements
+    </Guildhall/Admissions/PortfolioRequirements.aspx>  /
+  * Programming
+
+
+  Programming Portfolio Requirements
+
+
+      Programming Portfolio Requirements
+
+
+*Online Uploading Instructions
+*
+
+**
+
+All application submissions will be uploaded through our online
+portfolio site <https://smuguildhall.slideroom.com>. If you do not have
+a portfolio showcasing your code, we ask that you complete the following
+assignments. Once completed, please upload to our online portfolio site
+<https://smuguildhall.smu.edu> and they will serve as your portfolio.
+
+*Portfolio Examples:*
+
+Submit in digital format, or on paper, 2-5 examples of structured
+computer code that you have written. We prefer C++, but will review
+other languages as well (C#, Java, etc...) Each example should be in a
+self-contained directory and should include code, documentation
+(indicating intent, scope, input, output, etc.), user
+guide/instructions, and illustrations of input and output for the
+program. Include a README text file explaining the contents of your
+submissions as follows:
+
+Your name
+Directory structure for your code samples
+Explanation/description of each code sample
+Date when the code was written
+
+You will save these into a .zip file and upload into the "media" section
+of our online portfolio site <https://smuguildhall.slideroom.com>.
+
+*Programming applicants /must///complete the following if they do not
+have a portfolio of their code:*
+
+*1. Assignment:*
+
+Create a Resource Manager for a Real Time Strategy (RTS) game. Your
+program manages a "directed graph" (a system of nodes and links between
+them going in one direction, much like web pages and their links). On
+startup, your program reads a file "resource.txt" (from the current
+directory) which describes resources and the resources they depend on.
+
+The file resource.txt could, for example, contain (exactly 4 lines):
+
+handgun bullets
+bullets ore
+bombs ore
+turret bullets
+
+The first line says that there is a link from a node called "handgun" to
+a node called 'bullet". This means for a handgun to be a useable, it
+relies on the resource bullets.
+
+Your program should work with any amount of nodes and any amount of
+links between them (your program may be tested with a larger
+resource.txt made by SMU Guildhall faculty). To this end, you should
+represent nodes with a Node class, and the set of links for a single
+node using an STL container of your choice.
+
+Your program should loop and display two items on the screen. The first
+is a current view of the graph. Secondly, you should list each node and
+whether it is usable or not. For any current node, if any of the nodes
+it relies on get deleted that node becomes unusable.
+
+Your program should handle two types of input. A user should be allowed
+to delete a node and quit at any time. If using a console program, input
+should be "q" for quit, or the name of a node to delete it. When you
+delete a node, make sure any links to it are deleted correctly too. Be
+certain to have correct memory management for these operations ensuring
+no memory leaks when the program exits.
+
+*Note:*
+
+As a guideline, programmers who will ultimately be successful at The
+Guildhall should not take more than a week to complete this assignment.
+
+*Extra Credit:*
+
+Add additional commands to insert new nodes and new links. Save the
+modified graph upon exiting. Create a nice graphical display. Take it as
+far as you can.
+
+*2. Complete The Huffman Exercise*
+
+Download </~/media/Site/guildhall/Documents/Huffman_Exercise.ashx?la=en>
+the Huffman Exercise PDF File. Complete and upload to our online
+portfolio site <https://smuguildhall.slideroom.com>.
+
+Accepted file formats for still images are: .jpg, .jpeg, .png, .gif
+(non-animated), .tif, .tiff, .bmp, .tga
+Accepted file formats for videos are: .m4v, .mov, .mp4, .wmv, .flv,
+.ask, .mpeg, .mpg, .mkv
+Accepted archiving formats are: .zip, .tgz
+Accepted file formats for documents are: .pdf, .txt, .docx, .doc
+
+*Note:*
+
+You application will NOT be reviewed until all non-optional elements on
+this list have been received.
+
+  *
+    Portfolio Requirements
+
+    </Guildhall/Admissions/PortfolioRequirements.aspx>
+  *
+    Art Creation
+
+    </Guildhall/Admissions/PortfolioRequirements/Art.aspx>
+  *
+    Level Design
+
+    </Guildhall/Admissions/PortfolioRequirements/Design.aspx>
+  *
+    Production
+
+    </Guildhall/Admissions/PortfolioRequirements/Production.aspx>
+  *
+    *Programming *
+
+    </Guildhall/Admissions/PortfolioRequirements/Programming.aspx>
+
+*© Southern Methodist University
+The Guildhall*
+5232 Tennyson Parkway, Building 2 | Plano, Texas | 75024 | 214-768-4278
+© SMU | Contact Us </Guildhall/ContactUs.aspx> | Legal Disclosures
+<http://smu.edu/legal/> | Site Index <http://smu.edu/siteindex/>
+
+A game changer since 2003
+SMU Guildhall
+
+</guildhall.aspx>
+

@@ -1,0 +1,70 @@
+(+ finished, - to do, * currently working on it, # comment)
+
+Journal for Huffman file coder
+
+-- 2015-10-02,17:04 --
++ started C++ project in Code::Blocks
+
+-- 2015-10-02,20:49 --
++ added way to build encode tree
++ added way to load a file
+
+-- 2015-10-03,20:09 --
++ added format information for .huf Huffman-encoded file.
++ added a code map in huffman file class to easily look up codes in huffman tree
++ worked on implementation of HuffmanFile::encodeWithTree(),
+  still need to write the tree data to encoded data buffer
+  
+-- 2015-10-04,16:29 --
++ finished encode with tree method and put packed bit method for HuffmanFile class
++ added ability to save a file as either decoded or encoded.
++ added a way to put packed bits into encoded data stream
+
+-- 2015-10-05,16:02 --
++ worked on decode file method and the methods it calls to 
+  huffman tree node class
++ added parent index field to huffman tree node class
++ finished encode file huffman style using existing tree
++ can now build a decode tree when decoding file
+
+-- 2015-10-06,23:43 --
++ can now print contents of huffman code tree
++ can print the code map
++ made debug printers
++ displayed output to console
+
+-- 2015-10-07,16:25 --
++ can print entire data stream (only recommended for small files)
++ get encode with tree to work properly
++ get encoded packed bit write to work
++ change size value in .huf spec to say total number of bits in encoded stream
++ delete weight field from tree file node class and all its references
+
+-- 2015-10-08,23:19 --
++ made a huffman file printer class and move all print methods over to that class 
+  (they are getting too large.)
++ can print a huffman tree list in post order now
+
+-- 2015-10-10,01:01 --
++ changed tree file structure to post order list for easier reading
++ tried to debug differences between raw and decoded files, seem have repeated differences;
+  tree construction error?
++ fixed above error; it was related to codes using bytes instead of words - not enough bits
++ succesfully decoded a variety of files back to their respective original raw states before an encode.
++ made a file comparer class to check for accuracy of encode/decode process.
++ added a way to get packed bits from an encoded data stream
++ decoded file huffman style
++ decoded file with pre-existing tree
++ satisfactorily "done" - even large files with many different bytes restore perfectly
+# files with Huffman already implemented, like JPG and MPG, grow *larger* upon encoding
+
+-- 2015-10-10,15:48 --
++ moved files around so the folders are less messy; all source files are in src folder
+  and all console output redirection text files should go to output folder
++ did further testing of a variety of file types
+
+-- today --
+(add stuff done here)
+
+-- left to do --
+- nothing

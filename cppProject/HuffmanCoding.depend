@@ -1,0 +1,90 @@
+# depslib dependency file v1.0
+1444503550 source:/home/youbumto/Desktop/programming/portfolio/HuffmanCoding/main.cpp
+	"HuffmanFile.h"
+	"HuffmanFilePrinter.h"
+	"FileComparer.h"
+	<iostream>
+
+1444446960 /home/youbumto/Desktop/programming/portfolio/HuffmanCoding/HuffmanFile.h
+	"HuffmanTreeNode.h"
+	"TreeFileNode.h"
+	"CodeMapEntry.h"
+	<string>
+	<vector>
+	<hash_map>
+
+1444434683 /home/youbumto/Desktop/programming/portfolio/HuffmanCoding/HuffmanTreeNode.h
+	"Direction.h"
+
+1444072676 /home/youbumto/Desktop/programming/portfolio/HuffmanCoding/Direction.h
+
+1444434717 /home/youbumto/Desktop/programming/portfolio/HuffmanCoding/TreeFileNode.h
+
+1444451614 /home/youbumto/Desktop/programming/portfolio/HuffmanCoding/CodeMapEntry.h
+
+1444456178 source:/home/youbumto/Desktop/programming/portfolio/HuffmanCoding/HuffmanFile.cpp
+	"HuffmanFile.h"
+	<fstream>
+	<stack>
+	<iostream>
+	<sstream>
+
+1444363470 /home/youbumto/Desktop/programming/portfolio/HuffmanCoding/HuffmanFilePrinter.h
+	"HuffmanFile.h"
+
+1444452944 source:/home/youbumto/Desktop/programming/portfolio/HuffmanCoding/HuffmanFilePrinter.cpp
+	"HuffmanFilePrinter.h"
+	<fstream>
+	<stack>
+	<iostream>
+	<sstream>
+
+1444449804 source:/home/youbumto/Desktop/programming/portfolio/HuffmanCoding/FileComparer.cpp
+	"FileComparer.h"
+	<iostream>
+
+1444503540 /home/youbumto/Desktop/programming/portfolio/HuffmanCoding/FileComparer.h
+	<vector>
+	<string>
+
+1444503612 source:/home/youbumto/Desktop/programming/portfolio/HuffmanCoding/src/FileComparer.cpp
+	"FileComparer.h"
+	<iostream>
+
+1444503540 /home/youbumto/Desktop/programming/portfolio/HuffmanCoding/src/FileComparer.h
+	<vector>
+	<string>
+
+1444452944 source:/home/youbumto/Desktop/programming/portfolio/HuffmanCoding/src/HuffmanFilePrinter.cpp
+	"HuffmanFilePrinter.h"
+	<fstream>
+	<stack>
+	<iostream>
+	<sstream>
+
+1444363470 /home/youbumto/Desktop/programming/portfolio/HuffmanCoding/src/HuffmanFilePrinter.h
+	"HuffmanFile.h"
+
+1444446960 /home/youbumto/Desktop/programming/portfolio/HuffmanCoding/src/HuffmanFile.h
+	"HuffmanTreeNode.h"
+	"TreeFileNode.h"
+	"CodeMapEntry.h"
+	<string>
+	<vector>
+	<hash_map>
+
+1444434683 /home/youbumto/Desktop/programming/portfolio/HuffmanCoding/src/HuffmanTreeNode.h
+	"Direction.h"
+
+1444072676 /home/youbumto/Desktop/programming/portfolio/HuffmanCoding/src/Direction.h
+
+1444434717 /home/youbumto/Desktop/programming/portfolio/HuffmanCoding/src/TreeFileNode.h
+
+1444451614 /home/youbumto/Desktop/programming/portfolio/HuffmanCoding/src/CodeMapEntry.h
+
+1444503550 source:/home/youbumto/Desktop/programming/portfolio/HuffmanCoding/src/main.cpp
+	"HuffmanFile.h"
+	"HuffmanFilePrinter.h"
+	"FileComparer.h"
+	<iostream>
+

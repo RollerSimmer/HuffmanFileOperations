@@ -1,0 +1,40 @@
+(- not fully implemented yet + implementing * currently implementing)
+
+Classes left to implement (methods nested by call):
+
++ main()
+
+* HuffmanFile
+    + encodeFile(string& ename,string& dname)
+        + loadfile(string& fname,HuffmanFile::loadtype how)
+        + buildEncodeTree()
+            + countOccurrences()
+            + initEncodeForest()
+            + findTwoLightestTrees()
+                + nodeweight(int index)
+            + joinLightestTrees()
+            + autoSetRootFlags()
+            + buildCodeMap()
+        + encodeWithTree()
+            + encodeTreeData()        
+            + putEncodedPackedBit(long bitpos,CodeMapEntry ce);
+        + savefile(string& fname,HuffmanFile::loadtype how)        
+    + decodeFile(string& dname,string& ename)
+        + checkEncodedHeader()
+        + decodeWithTree()
+            + decodeTreeData()
+                + readTreeFileNode()
+                + smartAddTreeEntry(HuffmanTreeNode& node)
+            + getBitPackedEncodedData()        
+                + getCodeBit()
+    + clearVisitedFlags()
+        
++ HuffmanFilePrinter
+    + HuffmanFilePrinter(HuffmanFile*hf)
+    + printTree()
+        + printTreeNode(int level,HuffmanTreeNode& node,unsigned char code)
+    + printCodeMap()
+    + printDataStream(HuffmanFile::filetype ft,HuffmanFile::printtype pt,short amtColumns)
+        + makeBytePrintable(unsigned char b,HuffmanFile::printtype pt)
+    
+        
